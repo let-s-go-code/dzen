@@ -40,18 +40,22 @@ class Blockchain:
                 return False
         return True
 
+
 # Инициализация блокчейна
 my_blockchain = Blockchain()
+
 
 # Добавление блоков
 my_blockchain.add_block(Block(1, time.time(), "Transaction 1", ""))
 my_blockchain.add_block(Block(2, time.time(), "Transaction 2", ""))
+
 
 # Вывод информации о блоках
 for block in my_blockchain.chain:
     print(f"Block {block.index}")
     print(f"Hash: {block.hash}")
     print(f"Previous Hash: {block.previous_hash}\n")
+
 
 # Проверка валидности
 print(f"Chain valid: {my_blockchain.is_chain_valid()}")
